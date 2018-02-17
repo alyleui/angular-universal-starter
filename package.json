@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:browser": "ng build --prod",
-    "build:server": "ng build -aot -app angular-firebase"
+    "build": "yarn build:browser && yarn build:server",
+    "build:browser": "rm -rf functions/dist && ng build --prod && yarn mv:index.html",
+    "build:server": "ng build -aot -app angular-firebase",
+    "serve:universal": "cd functions && yarn serve",
+    "mv:index.html": "mkdir functions/dist && mv dist/index.html functions/dist/"
   },
   "private": true,
   "dependencies": {

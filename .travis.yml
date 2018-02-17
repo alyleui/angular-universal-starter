@@ -1,0 +1,34 @@
+language: node_js
+sudo: false
+node_js:
+- '8.4.0'
+
+addons:
+  chrome: stable
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - "$HOME/.npm"
+    - "$HOME/.cache"
+
+branches:
+  only:
+    - master
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - yarn install
+        - ng lint
+    - stage: deploy
+      script:
+        - yarn cd functions && yarn
+        - yarn build
+        - cd functions && yarn firebase deploy --token $FIREBASE_TOKEN --non-interactive
+
+stages:
+  - test
+  - deploy

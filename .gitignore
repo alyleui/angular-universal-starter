@@ -46,3 +46,4 @@ dist-server
 
 #others
 firebase-debug.log
+yarn-error.log

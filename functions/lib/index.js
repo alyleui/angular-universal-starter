@@ -3,11 +3,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // These are important and needed before anything else
 // tslint:disable-next-line:no-implicit-dependencies no-import-side-effect
 require("zone.js/dist/zone-node");
+// tslint:disable-next-line:no-implicit-dependencies no-import-side-effect
+require("reflect-metadata");
 const { enableProdMode } = require('@angular/core');
 const { renderModuleFactory } = require('@angular/platform-server');
 const module_map_ngfactory_loader_1 = require("@nguniversal/module-map-ngfactory-loader");
 const express = require("express");
 const path_1 = require("path");
+const functions = require("firebase-functions");
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 const app = express();
@@ -25,7 +28,9 @@ app.get('**', (req, res) => {
         ]
     }).then(html => res.status(200).send(html));
 });
-app.listen(3000, () => {
-    console.log('Example app listening on port 3000!');
-});
+/** for Firebase Functions */
+exports.ssr = functions.https.onRequest(app);
+// app.listen(3000, () => {
+//   console.log('Example app listening on port 3000!');
+// });
 //# sourceMappingURL=index.js.map

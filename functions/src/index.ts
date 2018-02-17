@@ -8,7 +8,7 @@ const { renderModuleFactory } = require('@angular/platform-server');
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 import * as express from 'express';
 import { join, resolve } from 'path';
-
+import * as functions from 'firebase-functions';
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
@@ -32,6 +32,9 @@ app.get('**', (req, res) => {
   }).then(html => res.status(200).send(html));
 });
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!');
-});
+/** for Firebase Functions */
+export const ssr = functions.https.onRequest(app);
+
+// app.listen(3000, () => {
+//   console.log('Example app listening on port 3000!');
+// });
