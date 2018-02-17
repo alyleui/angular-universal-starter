@@ -30,6 +30,7 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
+    "firebase-tools": "^3.17.4",
     "tslint": "^5.8.0",
     "typescript": "^2.5.3"
   },

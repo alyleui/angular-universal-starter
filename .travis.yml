@@ -25,7 +25,7 @@ jobs:
         - ng lint
     - stage: deploy
       script:
-        - yarn cd functions && yarn
+        - cd functions && yarn
         - yarn build
         - cd functions && yarn firebase deploy --token $FIREBASE_TOKEN --non-interactive
 
