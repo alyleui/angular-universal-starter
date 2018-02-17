@@ -152,6 +152,14 @@
   dependencies:
     tslib "^1.7.1"
 
+"@angular/platform-server@^5.2.0":
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-5.2.5.tgz#2111bfd836a16c787a10f2099a0c26b6a3a02b05"
+  dependencies:
+    domino "^1.0.29"
+    tslib "^1.7.1"
+    xhr2 "^0.1.4"
+
 "@angular/router@^5.2.0":
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-5.2.5.tgz#f8f220d5fb85fc10d60fe606b0f2a64732265142"
@@ -2351,6 +2359,10 @@ domhandler@2.1:
   resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-2.1.0.tgz#d2646f5e57f6c3bab11cf6cb05d3c0acf7412594"
   dependencies:
     domelementtype "1"
+
+domino@^1.0.29:
+  version "1.0.30"
+  resolved "https://registry.yarnpkg.com/domino/-/domino-1.0.30.tgz#54a4154ecae968616680f8feba3cedff355c71f4"
 
 domutils@1.1:
   version "1.1.6"
@@ -8751,6 +8763,10 @@ xdg-basedir@^2.0.0:
 xdg-basedir@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
+
+xhr2@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/xhr2/-/xhr2-0.1.4.tgz#7f87658847716db5026323812f818cadab387a5f"
 
 xml-char-classes@^1.0.0:
   version "1.0.0"
