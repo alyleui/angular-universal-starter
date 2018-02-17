@@ -26,6 +26,7 @@
     "express": "^4.16.2",
     "firebase-admin": "~5.8.1",
     "firebase-functions": "^0.8.1",
+    "reflect-metadata": "^0.1.12",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
