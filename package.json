@@ -8,7 +8,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "install:functions": "cd functions yarn",
-    "build": "yarn build:browser && yarn build:server && build:functions",
+    "build": "yarn build:browser && yarn build:server && yarn build:functions",
     "build:browser": "rm -rf functions/dist && ng build --prod && yarn mv:index.html",
     "build:server": "ng build -aot -app angular-firebase",
     "build:serve": "ng build && yarn serve:universal",
