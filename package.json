@@ -11,7 +11,7 @@
     "build": "yarn build:browser && yarn build:server && yarn build:functions",
     "build:browser": "rm -rf functions/dist && ng build --prod && yarn mv:index.html",
     "build:server": "ng build -aot -app angular-firebase",
-    "build:serve": "ng build && yarn serve:universal",
+    "build:serve": "yarn build && yarn serve:universal",
     "build:functions": "cd functions && yarn build",
     "serve:universal": "cd functions && yarn serve",
     "mv:index.html": "mkdir functions/dist && mv dist/index.html functions/dist/"
