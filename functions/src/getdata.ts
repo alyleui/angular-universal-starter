@@ -5,5 +5,5 @@ import { join,resolve } from 'path';
 export const readData = functions.https.onRequest((req, res) => {
   const data = readFileSync(`${process.cwd()}/data.json`, 'utf8');
   console.log(JSON.parse(data));
-  res.json(data);
+  res.json(JSON.parse(data));
 });
