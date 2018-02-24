@@ -34,6 +34,7 @@ app.get('**', (req, res) => {
 
 /** for Firebase Functions */
 export const ssr = functions.https.onRequest(app);
+export * from './getdata';
 
 // app.listen(3000, () => {
 //   console.log('Example app listening on port 3000!');
